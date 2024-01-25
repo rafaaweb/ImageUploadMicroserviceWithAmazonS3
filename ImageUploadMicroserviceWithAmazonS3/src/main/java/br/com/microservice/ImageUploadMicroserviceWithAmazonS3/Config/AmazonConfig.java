@@ -18,7 +18,7 @@ public class AmazonConfig {
      private static final String SECRET_KEY = "secretkey";
 
      @Bean
-    public static AmazonS3 s3WithAccessKey(){
+    public static AmazonS3 s3WithCredentials(){
          AWSCredentials credentials = new BasicAWSCredentials(ACCESS_KEY, SECRET_KEY);
          return AmazonS3ClientBuilder
                  .standard()
